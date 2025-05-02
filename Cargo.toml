@@ -6,7 +6,7 @@ authors = ["Automata Team"]
 homepage = "https://www.ata.network/"
 
 [package.metadata]
-rust-toolchain = "nightly-2024-02-01"
+rust-toolchain = "nightly-2024-07-31"
 target = "x86_64-automata-linux-sgx"
 intel-sgx-sdk = "2.24.100"
 
