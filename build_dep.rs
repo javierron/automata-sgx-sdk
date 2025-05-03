@@ -11,7 +11,7 @@ pub fn get_teaclave_sdk_path() -> Option<PathBuf> {
     cmd.args(["metadata"]);
     let output = cmd.output().unwrap();
     let output = String::from_utf8_lossy(&output.stdout);
-    let github_name = "incubator-teaclave-sgx-sdk-9a654826af166474/";
+    let github_name = "incubator-teaclave-sgx-sdk-8d77e9bca06ce3b7/";
     let idx = output.find(github_name)?;
     let start_idx = output[..idx].rfind('"')? + 1;
     let output = &output[start_idx..];
