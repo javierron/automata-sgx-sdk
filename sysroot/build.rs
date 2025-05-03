@@ -33,8 +33,9 @@ fn build_sysroot() {
         sdk_path.display(),
     );
     // may cause deadlock when called by cargo-sgx
-    let mut cmd = Command::new(std::env::var("CARGO").unwrap());
-    cmd.args(["build", "--manifest-path"]);
+    let mut cmd = Command::new("rustup");
+    cmd.args(["run", "nightly-2024-02-01"]);
+    cmd.args(["cargo", "build", "--manifest-path"]);
     cmd.arg(format!("{}/std/Cargo.toml", rust_target_path.display()));
     cmd.args([
         "-Z",
